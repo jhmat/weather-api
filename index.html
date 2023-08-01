@@ -20,5 +20,43 @@
     />
     <script src="./js/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h3>Confira o clima de uma cidade</h3>
+        <div class="input-city-container">
+          <input
+            type="text"
+            id="input-city"
+            placeholder="Digite o nome da cidade"
+          />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+      <div class="weather-data">
+        <div class="city-name-container">
+          <i class="fa-solid fa-location-dot"></i>
+          <h2 id="city-name">São Paulo</h2>
+          <img src="" alt="Bandeira do país" id="country-flag" />
+        </div>
+        <p><span id="temp">25</span>&deg;C</p>
+        <div class="weather-condition-container">
+          <span id="weather-condition">Nublado</span>
+          <img src="" alt="Condição climática" id="weather-icon" />
+        </div>
+        <div class="aditional-information">
+          <p class="umidity">
+            <i class="fa-solid fa-droplet"></i>
+            <span id="umidity-percent">85%</span>
+          </p>
+          <p class="wind">
+            <i class="fa-solid fa-wind"></i>
+            <span id="wind-speed">75km/h</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
