@@ -11,6 +11,8 @@ const wtIconElement = document.querySelector("#weather-icon");
 const humidityElement = document.querySelector("#humidity-percent");
 const windElement = document.querySelector("#wind-speed");
 
+const weatherDataElement = document.querySelector(".weather-data");
+
 const getWeatherData = async (city) => {
   const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=pt_br&units=metric`;
 
@@ -38,6 +40,7 @@ const showWeatherData = async (city) => {
   windElement.innerText = `${parseInt(data.wind.speed)}km/h`;
 
   inputCity.value = "";
+  weatherDataElement.classList.remove("hide");
 };
 
 searchBtn.addEventListener("click", (e) => {

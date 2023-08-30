@@ -23,10 +23,6 @@ body {
   text-align: center;
 }
 
-.form {
-  margin-bottom: 1.5rem;
-}
-
 .form h3 {
   margin-bottom: 1rem;
 }
@@ -57,9 +53,14 @@ body {
   background-color: #429ed1;
 }
 
+.hide {
+  display: none;
+}
+
 .weather-data {
   border-top: 1px #fff solid;
   padding-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .city-name-container {
