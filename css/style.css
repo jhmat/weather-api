@@ -24,7 +24,7 @@ body {
 }
 
 .form {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form h3 {
@@ -55,4 +55,47 @@ body {
 
 .form button:active {
   background-color: #429ed1;
+}
+
+.weather-data {
+  border-top: 1px #fff solid;
+  padding-top: 1.5rem;
+}
+
+.city-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.city-name-container i {
+  font-size: 1rem;
+}
+
+#city-name {
+  margin: 0.6rem;
+}
+
+#country-flag {
+  height: 30px;
+}
+
+.weather-condition-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+
+.aditional-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.umidity {
+  border-right: 1px #fff solid;
+  margin: 0.6rem;
+  padding: 0.6rem;
 }
