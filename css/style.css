@@ -88,6 +88,10 @@ body {
   margin: 0.6rem 0;
 }
 
+#weather-condition {
+  text-transform: capitalize;
+}
+
 .aditional-information {
   display: flex;
   justify-content: center;
@@ -98,7 +102,7 @@ body {
   margin: 0.6rem;
 }
 
-.umidity {
+.humidity {
   border-right: 1px #fff solid;
   margin: 0.6rem;
   padding: 0.6rem;

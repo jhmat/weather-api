@@ -8,7 +8,7 @@ const countryElement = document.querySelector("#country-flag");
 const temperatureElement = document.querySelector("#temp");
 const wtConditionElement = document.querySelector("#weather-condition");
 const wtIconElement = document.querySelector("#weather-icon");
-const umidityElement = document.querySelector("#umidity-percent");
+const humidityElement = document.querySelector("#humidity-percent");
 const windElement = document.querySelector("#wind-speed");
 
 const getWeatherData = async (city) => {
@@ -17,11 +17,27 @@ const getWeatherData = async (city) => {
   const res = await fetch(apiURL);
   const data = await res.json();
 
-  console.log(data);
+  return data;
 };
 
-const showWeatherData = (city) => {
-  getWeatherData(city);
+const showWeatherData = async (city) => {
+  const data = await getWeatherData(city);
+
+  cityNameElement.innerText = data.name;
+  countryElement.setAttribute(
+    "src",
+    `https://flagsapi.com/${data.sys.country}/flat/48.png`
+  );
+  temperatureElement.innerText = parseInt(data.main.temp);
+  wtConditionElement.innerText = data.weather[0].description;
+  wtIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+  );
+  humidityElement.innerText = `${data.main.humidity}%`;
+  windElement.innerText = `${parseInt(data.wind.speed)}km/h`;
+
+  inputCity.value = "";
 };
 
 searchBtn.addEventListener("click", (e) => {
