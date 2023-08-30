@@ -94,6 +94,10 @@ body {
   align-items: center;
 }
 
+.aditional-information span {
+  margin: 0.6rem;
+}
+
 .umidity {
   border-right: 1px #fff solid;
   margin: 0.6rem;
